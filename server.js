@@ -2,9 +2,8 @@ const express = require("express");
 const app = express();
 
 app.set("view engine", "ejs");
-app.use(logger);
 
-app.get("/", (req, res) => {
+app.get("/", logger, (req, res) => {
   console.log("Here in console");
   res.render("index", { name: "Nirajan" });
 });
