@@ -1,12 +1,9 @@
 const express = require("express");
 const app = express();
 
-app.set("view engine", "ejs");
+app.use(express.static("public"));
 
-app.get("/", (req, res) => {
-  console.log("Here in console");
-  res.render("index", { name: "Nirajan" });
-});
+app.set("view engine", "ejs");
 
 const userRouter = require("./routes/users");
 const postRouter = require("./routes/posts");
