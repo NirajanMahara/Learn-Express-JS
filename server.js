@@ -8,4 +8,12 @@ app.get("/", (req, res) => {
   res.render("index", { name: "Nirajan" });
 });
 
+app.get("/users", (req, res) => {
+  res.send("User List");
+});
+
+app.get("/users/new", (req, res) => {
+  res.send("User New Form");
+});
+
 app.listen(3000);
