@@ -3,7 +3,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-app.get("/", logger, (req, res) => {
+app.get("/", logger, logger, logger, (req, res) => {
   console.log("Here in console");
   res.render("index", { name: "Nirajan" });
 });
