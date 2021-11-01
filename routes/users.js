@@ -25,4 +25,9 @@ router
     res.send(`Delete User With ID ${req.params.id}`);
   });
 
+router.param("id", (req, res, next, id) => {
+  console.log(id);
+  next();
+});
+
 module.exports = router;
